@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<form method = "post" enctype= "multipart/form-data" 
+      action = "http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+    <fieldset>
+        <legend><h1>Your Face</h1></legend>
+        <label for="preview">Your image:</label>
+        <input type="file" id="preview" name="preview" required><br>
+         Image Preview:
+    </fieldset><br>
+    <fieldset>
+        <legend><h1>Your General Details</h1></legend>
+        <label for = "name"> Name:</label>
+        <input type="text" id = "name" name=  "name" required><br>
+        <label for = "gender"> Gender:</label>
+        <input type="radio" name= "gender" value= "male" required>Male
+        <input type="radio" name= "gender" value= "female" required>Female<br>
+        <label for = "age"> Age:</label>
+        <input type="number" id = "age" name=  "age" required><br>
+        <label for = "dob"> Date of birth:</label>
+        <input type="date" id = "dob" name=  "dob" required><br>
+        <label for = "color"> Favourite Color:</label>
+        <input type="color" id = "color" name=  "color" required><br>
+        <label for = "country"> Which country:</label>
+        <select name = "country">
+            <option value = "In">India</option>
+            <option value = "Ca">Canada</option>
+            <option value = "Ch">China</option>
+            <option value = "Us">USA</option>
+            <option value = "Ger">Germany</option>
+            <option value = "">no selection</option>
+        </select>
+    </fieldset><br>
+    <fieldset>
+        <legend><h1>Your Indicators</h1></legend>
+        <label for= "height">Height:</label> 
+        Short<input type = "range" min="0" max="100" step="5" value="50"
+                    id = "height" name = "height">Tall<br>
+        <label for= "salary">Salary:</label> 
+        Poor<input type = "range" min="0" max="100" step="5" value="50"
+                    id = "height" name = "height">Rich
+    </fieldset><br>
+    <fieldset>
+        <legend><h1>Your Contact Information</h1></legend>
+        <label for = "mail"> Email:</label>
+        <input type="email" id = "mail" name=  "mail" required><br>
+        <label for = "mobile"> Mobile:</label>
+        <input type="tel" id = "mobile" name=  "mobile" required><br>
+        Address:<textarea rows="3" cols="60" name="Address:">
+        </textarea><br>
+        <label for = "contact"> Method to contact you:</label>
+        <input type="checkbox"  name=  "contact" value="Email" required>Email
+        <input type="checkbox"  name=  "contact" value= "Whatsapp" required>Whatsapp
+        <input type="checkbox"  name=  "contact" value="In-app chat" required>In-app chat
+    </fieldset><br>
+    <input type= "submit" value= "Submit!">
+</form>
+</html>

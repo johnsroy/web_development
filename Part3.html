@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<form method = "post" enctype= "multipart/form-data"                                                action = "http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+<head>
+    <style>
+        label:hover { font-size:40px }
+        fieldset{
+            background:lightyellow;
+            border:10px solid yellow;
+            margin-bottom:10px
+        }
+        label{
+            width: 180px;
+            display:inline-block;
+            text-align: right;
+            text-align: top;      
+        }
+        input[type=checkbox] {
+            width: auto;
+        }
+         input[type=radio] {
+            width: auto;
+        }
+        range{
+            text-align:center;
+        }
+        .leftlabel, .rightlabel {
+            display: inline-block;
+            width: 50px;
+            padding: 2px;
+            text-align: center;
+            }
+
+        .leftlabel {
+            background-color: red;
+            color: white;
+        }
+        .rightlabel {
+            background-color: purple;
+            color: white;
+            }
+        textarea{
+            height: 50px;
+            width: 360px;
+        }
+        
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend><h1>Your Face</h1></legend>
+        <label for="preview">Your image:</label>
+        <input type="file" required><br>
+         <label>Image Preview:</label>
+        <img id="preview" src>
+    </fieldset><br>
+    <fieldset>
+        <legend><h1>Your General Details</h1></legend>
+        <label for = "name"> Name:</label>
+        <input type="text" id = "name" name=  "name" required><br>
+        <label for = "gender"> Gender:</label>
+        <input type="radio" name= "gender" value= "male" required>Male
+        <input type="radio" name= "gender" value= "female" required>Female<br>
+        <label for = "age"> Age:</label>
+        <input type="number" id = "age" name=  "age" required><br>
+        <label for = "dob"> Date of birth:</label>
+        <input type="date" id = "dob" name=  "dob" required><br>
+        <label for = "color"> Favourite Color:</label>
+        <input type="color" id = "color" name=  "color" required><br>
+        <label for = "country"> Which country:</label>
+        <select name = "country">
+            <option value = "In">India</option>
+            <option value = "Ca">Canada</option>
+            <option value = "Ch">China</option>
+            <option value = "Us">USA</option>
+            <option value = "Ger">Germany</option>
+            <option value = "">no selection</option>
+        </select>
+    </fieldset><br>
+    <fieldset>
+        <legend><h1>Your Indicators</h1></legend>
+        <label for= "height" class="margin">Height:</label>
+        <span class = "leftlabel">Short</span>
+        <input type = "range" min="0" max="100" step="5" value="50"
+                    id = "height" name = "height">
+        <span class= "rightlabel">Tall </span>
+        <br>
+        <label for= "salary" class="margin">Salary:</label> 
+        <span class="leftlabel">Poor</span>
+        <input type = "range" min="0" max="100" step="5" value="50"
+                    id = "height" name = "height">
+        <span class="rightlabel">Rich</span>
+    </fieldset><br>
+    <fieldset>
+        <legend><h1>Your Contact Information</h1></legend>
+        <label for = "mail"> Email:</label>
+        <input type="email" id = "mail" name=  "mail" required><br>
+        <label for = "mobile"> Mobile:</label>
+        <input type="tel" id = "mobile" name=  "mobile" required><br>
+        <label for = "Address"> Address:</label><textarea rows="3" cols="60" name="Address:">
+        </textarea><br>
+        <label for = "contact"> Method to contact you:</label>
+        <input type="checkbox"  name=  "contact" value="Email" required>Email
+        <input type="checkbox"  name=  "contact" value= "Whatsapp" required>Whatsapp
+        <input type="checkbox"  name=  "contact" value="In-app chat" required>In-app chat
+    </fieldset><br>
+    <input type= "submit" value= "Submit!">
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</form>
+</html>
