@@ -1,0 +1,22 @@
+Random Number Generators
+<!doctype html>
+<html>
+    <body>
+    <script>
+        var random_number;
+        //For a range between 0 upto 1 [o,1)
+        random_number = Math.random();
+        alert( random_number);
+        //For an user defined range
+        var max_value = 8;
+        random_number = Math.random() * max_value;
+        alert("Random number in range 0 to" + "7.99999:\n"
+             + random_number);
+        //Math.floor() to dump off the decimal place
+        random_number = Math.random() * 50;
+        random_number = Math.floor(random_number);
+        alert("Random number is in the range 0 to 49: "+ random_number);
+    
+    </script>
+    </body>
+</html>

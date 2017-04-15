@@ -1,0 +1,18 @@
+<!doctype HTML>
+<html>
+    <body onload = "Check_User_Age()">
+    <h1> This is my naughty home page!</h1>
+        <script>
+            function Check_User_Age(){
+                if (userAge()<18)
+                    alert ("Please grow up first!");
+            }
+            function userAge(){
+                var age_text,age;
+                age_text = prompt("Enter your age");
+                age = parseInt(age_text);
+                return age;
+            }
+        </script>
+    </body>
+</html>

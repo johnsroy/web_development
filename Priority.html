@@ -1,0 +1,32 @@
+A student realises he needs to get more organised. He develops JavaScript code to help him. Tasks he has to do are stored in the array todo and the priority of those items are stored in array priority. In that array the number 1 means the highest priority, 2 means the second highest priority, and so on. His code will then display the items he needs to do, in order from the highest priority item to the lowest priority item. Output is in the alert window.
+
+<!doctype html>
+<html>
+<head>
+    <script>
+        var todo = ["see doctor", "do assignment", "pay rent", 
+            "check bank account", "clean room"];
+        var priority = [3, 4, 1, 2, 5];
+        var index = 0;
+        var todoInOrderOfPriority = [];
+
+        todoInOrderOfPriority.length = todo.length;
+
+        while ( index < todo.length ) {
+                position = priority.indexOf( index+1 );
+                todoInOrderOfPriority[index] = todo[position];
+                //to understand the order of operations
+                alert(
+                        "index=" + index + "\n" +
+                        "index+1=" + (index+1) + "\n" +
+                        "position=" + position + "\n" +
+                        "todo=" + todo + "\n" +
+                        "todoInOrderOfPriority=" + todoInOrderOfPriority );
+                index++;
+        }                            
+   
+        alert("Previous order:\n\n" + todo + "\n\n"
+         + "Now in order of priority:\n\n" + todoInOrderOfPriority);
+    </script>
+</head>
+</html>
